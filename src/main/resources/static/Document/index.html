@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>CSS3 Sticky Contacts</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;CSS3 Sticky Contacts&rdquo; Documentation by &ldquo;TechZia&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;CSS3 Sticky Contacts&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 3/20/2013<br>
+					By: TechZia<br>
+					Email: <a href="mailto:ziaulsadat@ymail.com">ziaulsadat@ymail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my CSS3 Fancy Menu. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/techzia">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>					  
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>The CSS3 Sticky Contacts is created completely on HTML &amp; CSS3. It has 7 types of animations.</p>
+		
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		
+		<p>If you would like to edit the colors of the contacts boxes and tooltips, you would do the following:</p>
+
+<pre>
+nav1 > ul {
+	top:25px;
+	width: 350px;
+	position:fixed;	
+}
+
+nav1 ul li {
+	position: relative;
+}
+
+nav1 ul li:hover > ul {
+	opacity: 1;
+}
+
+nav1 ul li a {
+	background-color: #7CB9E8;
+	color: #535152;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+	box-shadow: 0px 3px 10px #333;
+}
+
+nav1 ul li a:after {
+	background-color: #7CB9E8;
+	content: "";
+	display: block;
+	height: 8px;
+	left: 46px;
+	position: absolute;
+	top: 21px;
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 8px;
+	z-index: 1;
+}
+
+nav1 ul li a:hover {
+	color: #373634;	
+}
+
+nav1 ul li ul {
+	display: block;
+	left: 50px;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	transition: opacity .5s;
+	-o-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+}
+
+nav1 ul li ul li {
+	float: left;
+	margin-top: 0;
+}
+
+nav1 ul li ul li a {
+	background-color: #FFF;
+	color: #7CB9E8;
+	position: relative;	 
+}
+
+
+nav1 ul li ul li a:after {
+	display: none; 
+}
+
+.tooltip1:hover:before {
+	background-color: #7CB9E8;	
+	content: attr(data-tooltip1);
+	color: #FFF;
+	display: block;
+	font-size: 12px;
+	height: 21px;
+	line-height: 21px;
+	padding: 0 10px;
+	position: absolute;
+	top: -18px;
+	white-space: nowrap;
+	z-index: 1;
+	box-shadow: 0px 3px 10px #333;
+}
+
+.tooltip1:hover:after {
+	background-color: #7CB9E8;
+	content: "";
+	display: block;
+	height: 8px;
+	left: 50%;
+	position: absolute;
+	top: -1px;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 8px;
+	z-index: 1;
+}
+
+</pre>
+
+		
+<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I have used 2 CSS files for the CSS3 Sticky Contacts.</p>
+        <pre>
+        1) font.css - Awesome Font styles <br>
+        2) zistyle.css - Main Styles and animations         
+        </pre>
+<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+
+<hr>
+		
+		
+		
+		
+		<p>Once again, thank you so much for purchasing CSS3 Sticky Contacts. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the menu on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>TechZia</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
