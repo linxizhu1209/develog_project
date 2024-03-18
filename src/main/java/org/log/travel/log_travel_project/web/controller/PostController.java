@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class SpringController {
+public class PostController {
 
     @GetMapping("/write")
     public String writeLog(){

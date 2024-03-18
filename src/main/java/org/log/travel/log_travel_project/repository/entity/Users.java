@@ -2,7 +2,7 @@ package org.log.travel.log_travel_project.repository.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.log.travel.log_travel_project.repository.entity.Enum.Role;
 
 @Entity
 @AllArgsConstructor

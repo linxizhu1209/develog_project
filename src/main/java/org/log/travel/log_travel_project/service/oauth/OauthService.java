@@ -1,7 +1,7 @@
 package org.log.travel.log_travel_project.service.oauth;
 
 import lombok.RequiredArgsConstructor;
-import org.log.travel.log_travel_project.repository.entity.Role;
+import org.log.travel.log_travel_project.repository.entity.Enum.Role;
 import org.log.travel.log_travel_project.repository.entity.Users;
 import org.log.travel.log_travel_project.web.dto.OAuthAttributes;
 import org.springframework.stereotype.Service;
@@ -38,9 +38,7 @@ public class OauthService {
 
     public Users toEntity(String name, String email,String picture){
         return Users.builder().name(name)
-                        .email(email)
-                                .imageUrl(picture)
-                                        .role(Role.GUEST).
+                .email(email).imageUrl(picture).role(Role.GUEST).
         build();
     }
 

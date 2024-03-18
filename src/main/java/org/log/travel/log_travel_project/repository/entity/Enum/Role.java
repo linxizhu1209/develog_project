@@ -1,4 +1,4 @@
-package org.log.travel.log_travel_project.repository.entity;
+package org.log.travel.log_travel_project.repository.entity.Enum;
 
 
 public enum Role {

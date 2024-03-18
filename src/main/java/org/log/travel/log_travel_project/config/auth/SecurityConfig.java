@@ -1,10 +1,8 @@
 package org.log.travel.log_travel_project.config.auth;
 
 import lombok.RequiredArgsConstructor;
-import org.log.travel.log_travel_project.repository.entity.Role;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
@@ -25,10 +23,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth->auth.requestMatchers("/**","/css/**","/img/**","/js/**","/font/**","/h2-console/**").permitAll()
 //                        .requestMatchers("/v1/**").hasRole(Role.GUEST.name())
                         .anyRequest().authenticated())
-                .logout((logout)->logout.logoutSuccessUrl("/"))
+                .logout((logout)->logout.logoutSuccessUrl("/v1/develog"))
                 .oauth2Login((oauth2)->oauth2.userInfoEndpoint(userInfoEndPoint->
-                        userInfoEndPoint.userService(customOAuth2UserService)).defaultSuccessUrl("/",true).permitAll());
+                        userInfoEndPoint.userService(customOAuth2UserService)).defaultSuccessUrl("/v1/develog",true).permitAll());
         return http.build();
+
 
 
 
