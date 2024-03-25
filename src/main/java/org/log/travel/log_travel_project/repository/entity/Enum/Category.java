@@ -1,18 +1,19 @@
 package org.log.travel.log_travel_project.repository.entity.Enum;
 
+import lombok.Getter;
+
+@Getter
 public enum Category {
 
-    SPRING("스프링"),
-    ALGORITHM("알고리즘"),
-    ETC("기타");
+    SPRING("SPRING"),
+    ALGORITHM("ALGORITHM"),
+    TROUBLE_SHOOTING("TROUBLE_SHOOTING"),
+    ETC("ETC");
 
-    private final String korean;
+    private final String description;
 
-    Category(String korean){
-        this.korean = korean;
+    Category(String description){
+        this.description = description;
     }
 
-    public String getKorean() {
-        return korean;
-    }
 }

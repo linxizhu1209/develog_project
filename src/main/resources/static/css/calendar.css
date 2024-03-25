@@ -288,3 +288,42 @@ a{
 .calendar > .dates > .last {color: #495055 !important;}
 .calendar > .dates > .next {color: #495055 !important;}
 
+
+
+.btn-hover {
+    width: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-align-all: center;
+    cursor: pointer;
+    height: 48px;
+    padding-bottom: 20px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+
+.btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}

@@ -1,9 +1,15 @@
 package org.log.travel.log_travel_project.repository.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.log.travel.log_travel_project.repository.entity.Enum.Category;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Posts {
 
     @Id

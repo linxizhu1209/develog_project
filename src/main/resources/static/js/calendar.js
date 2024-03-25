@@ -9,7 +9,7 @@
     var thisLast = new Date(CDate.getFullYear(), CDate.getMonth() + 1, 0); //이번 달의 마지막 날
     document.querySelector(".month").innerHTML = (CDate.getMonth() + 1) + "월";  //month에 월 출력
     const dates = [];
-    if(thisFirst.getDay()!=0){
+    if(thisFirst.getDay()!==0){
     for(var i = 0; i < thisFirst.getDay(); i++){
     dates.unshift(prevLast.getDate()-i); // 지난 달 날짜 채우기
 }
@@ -24,8 +24,8 @@
     for(var i = 0; i < 42; i++){
     if(i < thisFirst.getDay()){
     htmlDates += '<div class="date last">'+dates[i]+'</div>';
-}else if(today.getDate()==dates[i] && today.getMonth()==CDate.getMonth() && today.getFullYear()==CDate.getFullYear()){
-    htmlDates += '<div id="date_'+dates[i]+'" class="date today" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>';
+}else if(today.getDate()===dates[i] && today.getMonth()===CDate.getMonth() && today.getFullYear()===CDate.getFullYear()){
+    htmlDates += '<div id="date_'+dates[i]+'" class="bi bi-heart" onclick="fn_selectDate('+dates[i]+');">'+dates[i]+'</div>';
 }else if(i >= thisFirst.getDay() + thisLast.getDate()){
     htmlDates += '<div class="date next">'+dates[i]+'</div>';
 }else{

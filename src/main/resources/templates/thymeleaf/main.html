@@ -153,7 +153,7 @@ var buildcalendar = function() {
         if (i < thisFirst.getDay()) {
             htmlDates += '<div class="date last">' + dates[i] + '</div>';
         } else if (today.getDate() === dates[i] && today.getMonth() === CDate.getMonth() && today.getFullYear() == CDate.getFullYear()) {
-            htmlDates += '<button id="date_' + dates[i] + '" class="date today" onclick="location.href=\'/v1/develog/write\'">' + 'T' + '</button>';
+            htmlDates += '<button id="date_' + dates[i] + '" class="btn-hover color-5" onclick="location.href=\'/v1/develog/write\'">' + '오늘' + '</button>';
        } else if (i >= thisFirst.getDay() + thisLast.getDate()) {
             htmlDates += '<div class="date next">' + dates[i] + '</div>';
         } else {

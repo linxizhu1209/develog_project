@@ -3,11 +3,14 @@ package org.log.travel.log_travel_project.web.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.log.travel.log_travel_project.config.auth.LoginUser;
+import org.log.travel.log_travel_project.repository.entity.Enum.Category;
 import org.log.travel.log_travel_project.service.oauth.UserService;
+import org.log.travel.log_travel_project.web.dto.RequestPosting;
 import org.log.travel.log_travel_project.web.dto.SessionUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +30,16 @@ public class mainController {
     }
 
     @GetMapping("/write")
-    public String writePage(){return "write";}
+    public String writePage(Model model){
+        model.addAttribute("post",new RequestPosting());
+        return "write";}
+
+    @ModelAttribute("postCategories")
+    public Category[] postCategories(){
+        return Category.values();
+    }
+
+
     @GetMapping("/login")
     public String loginPage(){ return "login";}
 

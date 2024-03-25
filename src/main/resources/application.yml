@@ -18,7 +18,7 @@ spring:
             scope: profile,email
 
   datasource:
-    url: jdbc:mysql://ec2-3-37-254-120.ap-northeast-2.compute.amazonaws.com:3306/develog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/develog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
     username: root
     password: ${DATABASE_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
